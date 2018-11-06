@@ -54,18 +54,6 @@ for key in dict:
 
 if __name__ == "__main__":
 
-    # block chart that shows the best movie rating from every year
-    plt.title('Graph from the best movies from every year')
-    plt.xlabel('Year')
-    plt.ylabel('Rating')
-    plt.bar(list_year, list_rating)
-    plt.axis([2007, 2018, 7,  10])
-    plt.xticks(list_year)
-    red_patch = mpatches.Patch(color='red', label='Average Rating')
-    plt.legend(handles=[red_patch])
-    # sets a line of average rating from all movies
-    plt.axhline(y = average, color='red')
-    plt.show()
 
     # block chart that shows the average rating of the combined movies per year
     plt.title('Average combined movie ratings per year')
@@ -80,6 +68,19 @@ if __name__ == "__main__":
     plt.axhline(y = average_tot, color='red')
     plt.show()
 
+    # block chart that shows the best movie rating from every year
+    plt.title('Graph from the best movies from every year')
+    plt.xlabel('Year')
+    plt.ylabel('Rating')
+    plt.bar(list_year, list_rating)
+    plt.axis([2007, 2018, 7,  10])
+    plt.xticks(list_year)
+    red_patch = mpatches.Patch(color='red', label='Average Rating')
+    plt.legend(handles=[red_patch])
+    # sets a line of average rating from all movies
+    plt.axhline(y = average, color='red')
+    plt.show()
+    
     # arctest that shows the average rating of the combined movies per year
     l = plt.plot(list_year, list_avr, 'ro')
     plt.xlabel('Year')
